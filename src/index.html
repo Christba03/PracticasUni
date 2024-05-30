@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My pagina web</title>
+    <link rel="stylesheet" href="menu.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Your header content goes here -->
+    </header>
+
+    <nav>
+      <!-- Your navigation menu goes here -->
+    </nav>
+
+    <main>
+        <div class="admin-panel clearfix">
+            <div class="slidebar">
+              <div class="logo">
+                <a href="logo.png"></a>
+              </div>
+              <ul>
+                <li><a href="#login" id="targeted">Log In</a></li>
+                <li><a href="#recetario">recetario</a></li>
+                <li><a href="#paquetes">Paquetes</a></li>
+                <li><a href="#venta">Venta</a></li>
+                <li><a href="#error">Errors</a></li>
+                <li><a href="#comments">comments</a></li>
+                <li><a href="#users">users</a></li>
+                <li><a href="#registro">Registro Productos</a></li>
+              </ul>
+            </div>
+            <div class="main">
+              <div class="mainContent clearfix">
+                <div id="login">
+                  <h2 class="header"><span class="icon"></span>Iniciar sesion</h2>
+                  <form action="#" target="" method="get" name="formDatosPersonales">
+
+                   <label for="user">User</label>
+                   <input type="text" name="user" id="User" placeholder="Escribe tu usuario"/>
+               
+                   <label for="email">Password</label>
+                   <input type="email" name="email" id="email" placeholder="Escribe contrasena" required />
+                    </form>      
+                 </div>
+                 <div id="recetario">
+                   <h2 class="header">recetario</h2>
+                   <form action="#" target="" method="get" name="formDatosPersonales3">
+
+                    <label for="nombre">Nombre Producto</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"/>
+                
+                    <label for="apellidoP">Ingredientes</label>
+                    <textarea name="error" for="error" placeholder="Menciona los ingredientes" maxlength="300"></textarea>
+       
+                    <label for="email">Proceso</label>
+                    <textarea name="error" for="error" placeholder="Menciona el proceso" maxlength="300"></textarea>
+
+                </form>
+                 </div>
+                 <div id="paquetes">
+                   <h2 class="header">Registro de paquetes</h2>
+                   <form action="#" target="" method="get" name="formDatosPersonales2">
+
+                    <label for="user1">Producto1</label>
+                    <input type="text" name="user1" id="user1" placeholder="Producto1"/>
+                
+                    <label for="email">Producto2</label>
+                    <input type="email" name="email" id="email" placeholder="Producto2" required />
+                
+                    <label for="asunto">Producto3</label>
+                    <input type ="text" name="asunto" id="asunto" placeholder="Producto3"/>
+                
+                    <label for="asunto">Costo total</label>
+                    <input type ="text" name="asunto" id="asunto" placeholder="Costo del paquete"/>
+
+                    <input type="submit" name="enviar" value="enviar datos"/>
+                 </div>
+                 <div id="venta">
+                   <h2 class="header">Venta</h2>
+                   <form action="#" target="" method="get" name="formDatosPersonales3">
+
+                    <label for="nombre">Nombre Producto</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"/>
+                
+                    <label for="apellidoP">Cantidad Vendida</label>
+                    <input type="text" name="apellidoP" id="apellidoP" placeholder="Escribe cantidad a registrar"/>
+       
+                    <label for="email">Costo parcial</label>
+                    <input type="email" name="email" id="email" placeholder="inserte costo de venta" required />
+                    <label for="email">Costo Total</label>
+                    <input type="email" name="email" id="email" placeholder="inserte costo de venta" required />
+                    <input type="submit" name="enviar" value="enviar datos"/>
+                </form>
+                 </div>
+                 <div id="error">
+                   <h2 class="header">Errors</h2>
+                   <form action="#" target="" method="get" name="formDatosPersonales">
+
+                    <label for="user">User</label>
+                    <input type="text" name="user" id="User" placeholder="Escribe tu usuario"/>
+                
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="email" required />
+                
+                    <label for="asunto">Asunto</label>
+                    <input type ="text" name="asunto" id="asunto" placeholder="titular de la consulta"/>
+                
+                    <label for="error">Error</label>
+                    <textarea name="error" for="error" placeholder="describe brevemente el error en menos de 300 carácteres" maxlength="300"></textarea>
+                    
+                    <input type="submit" name="enviar" value="enviar datos"/>
+                    </form>
+                 </div>
+                 <div id="comments">
+                   <h2 class="header">comments</h2>
+                   <form action="#" target="" method="get" name="formDatosPersonales2">
+
+                    <label for="user1">User</label>
+                    <input type="text" name="user1" id="user1" placeholder="Escribe tu usuario"/>
+                
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="email" required />
+                
+                    <label for="asunto">Asunto</label>
+                    <input type ="text" name="asunto" id="asunto" placeholder="titular de la consulta"/>
+                
+                    <label for="error">Comentario</label>
+                    <textarea name="error" for="error" placeholder="Tiene 300 caracteres para dar su opinion" maxlength="300"></textarea>
+                    
+                    <input type="submit" name="enviar" value="enviar datos"/>
+                </form>
+                 </div>
+                 <div id="users">
+                   <h2 class="header">users</h2>
+                   <form action="#" target="" method="get" name="formDatosPersonales3">
+
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"/>
+                
+                    <label for="apellidoP">Apellido Paterno</label>
+                    <input type="text" name="apellidoP" id="apellidoP" placeholder="Escribe tu apellidoP"/>
+       
+                    <label for="apellidoM">Apellido Materno</label>
+                    <input type="text" name="apellidoM" id="apellidoM" placeholder="Escribe tu apellidoM"/>
+             
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="email" required />
+                
+                    <label for="contrasena">Pass</label>
+                    <input name="mensaje" for="contrasena" placeholder="Maximo 15 caracteres" maxlength="15">
+                    
+                    <input type="submit" name="enviar" value="enviar datos"/>
+                </form>
+                 </div>
+                 <div id="registro">
+                    <h2 class="header">Registrar productos</h2>
+                    <form action="#" target="" method="get" name="formDatosPersonales3">
+
+                        <label for="nombre">Nombre Producto</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"/>
+                    
+                        <label for="apellidoP">Cantidad</label>
+                        <input type="text" name="apellidoP" id="apellidoP" placeholder="Escribe cantidad a registrar"/>
+           
+                        <label for="apellidoM">Inserte imagen</label>
+                        <input type="text" name="apellidoM" id="apellidoM" placeholder="inserte imagen muestra"/>
+                 
+                        <label for="email">Costo</label>
+                        <input type="email" name="email" id="email" placeholder="inserte costo de venta" required />
+                    
+                        <input type="submit" name="enviar" value="enviar datos"/>
+                    </form>
+                  </div>
+               </div>
+               <ul class="statusbar">
+
+               </ul>
+             </div>
+          </div>
+
+
+
+
+      <!-- Your main content goes here -->
+    </main>
+
+    <footer>
+      <!-- Your footer content goes here -->
+    </footer>
+  </body>
+</html>
