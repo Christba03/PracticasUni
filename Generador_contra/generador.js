@@ -43,7 +43,26 @@ let passwordArray = randomNumbers.concat(randomLetters, randomSpecialChars);
 randomPassword = passwordArray.join('');
 console.log(randomPassword);
 
-// randomize randomPassword
-let randomizedPassword = randomPassword.split('').sort(() => Math.random() - 0.5).join('');
-console.log(randomizedPassword);
+//verificador de caracteres adyacentes
+function verificadorDeDuplicados(str) {
+    let arr = str.split('');
+    console.log(arr);
+    for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i] === arr[i + 1]) {
+            // Encontrar un carácter que no sea igual a arr[i]
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[j] !== arr[i] && (j === arr.length - 1 || arr[j] !== arr[j + 1])) {
+                    // Intercambiar
+                    [arr[i + 1], arr[j]] = [arr[j], arr[i + 1]];
+                    break;
+                }
+            }
+        }
+    }
+    return arr.join('');
+}
 
+// Randomize randomPassword and ensure no adjacent duplicates
+let randomizedPassword = randomPassword.split('').sort(() => Math.random() - 0.5).join('');
+randomizedPassword = verificadorDeDuplicados(randomizedPassword);
+console.log(randomizedPassword);
