@@ -38,7 +38,7 @@ for (let i = 0; i < 3; i++) {
     randomSpecialChars.push(especial[randomIndex]);
 }
 
-// combine randomNumbers, randomLetters, and randomSpecialChars to form the password
+// recombina la contraseña
 let passwordArray = randomNumbers.concat(randomLetters, randomSpecialChars);
 randomPassword = passwordArray.join('');
 console.log(randomPassword);
@@ -62,7 +62,6 @@ function verificadorDeDuplicados(str) {
     return arr.join('');
 }
 
-// Randomize randomPassword and ensure no adjacent duplicates
 let randomizedPassword = randomPassword.split('').sort(() => Math.random() - 0.5).join('');
 randomizedPassword = verificadorDeDuplicados(randomizedPassword);
 console.log(randomizedPassword);
