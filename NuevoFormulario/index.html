@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
+    <link rel="stylesheet" href="estilos.css" />
     <title>Formulario Universitario</title>
 </head>
 <body>
+    <div class="container">  
     <h2>Formulario Universitario</h2>
     <form>
         <!--  numéricos -->
+        <fieldset>
         <label for="creditos">Créditos Aprobados:</label>
         <input type="number" id="creditos" name="creditos"><br><br>
-
+        </fieldset>
         <label for="semestre">Semestre Actual:</label>
         <input type="number" id="semestre" name="semestre"><br><br>
 
@@ -110,5 +113,7 @@
         <button type="reset">Restablecer</button>
         <button type="button" onclick="alert('Botón presionado')">Picale</button>
     </form>
+    </div>
+    https://codepen.io/ssbalakumar/details/bGwwaG
 </body>
 </html>
