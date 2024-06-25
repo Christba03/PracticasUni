@@ -131,11 +131,9 @@
             <label for="comentarios">Comentario:</label>
             <textarea id="comentarios" name="comentarios" placeholder="Escribe un comentario"></textarea><br /><br />
             <!-- botones -->
-            <button type="submit">Enviar</button>
-            <button type="reset">Restablecer</button>
-            <button type="button" onclick="alert('Botón presionado')">
-                Picale
-            </button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="reset" id="resetButton" class="btn btn-secondary">Restablecer</button>
+            <button type="button" class="btn btn-info" onclick="alert('Botón presionado')">Picale</button>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -147,6 +145,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $("#resetButton").click(function() {
+                $("#contact")[0].reset();
+            });
+        });
+    </script>   
 </body>
 
 </html>
