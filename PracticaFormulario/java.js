@@ -168,8 +168,8 @@ for (let i = 0; i < alfabeto.length; i++) {
   if (minus_cadena.match(eval("/" + alfabeto[i] + "/g")) != null) {
     coincidencia.push(
       alfabeto[i] +
-        ": "  + minus_cadena.match(eval("/" + alfabeto[i] + "/g")).length
-          
+        ": " +
+        minus_cadena.match(eval("/" + alfabeto[i] + "/g")).length
     );
   }
 }
