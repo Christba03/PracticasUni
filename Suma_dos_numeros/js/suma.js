@@ -1,6 +1,10 @@
 function operaciones(operacion){
     let numero1 = $("#numero1").val();
     let numero2 = $("#numero2").val();
+    if (numero1=="" || numero2==""){
+        alert("Debe ingresar los dos números");
+        return;
+    }
     let resultado = 0;
     switch(operacion){
         case '+':
