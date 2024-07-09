@@ -2,7 +2,7 @@
 //Esta función se manda a llamar cuando se termina de cargar por completo la página
 $(document).ready(function() {
     // Esta es la URL de la API donde se encuentran los usuarios.
-    const apiUrl = 'https://reqres.in/api/users';
+    const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
 
     // Función para cargar los usuarios desde la API.
     function loadUsers() {
@@ -20,12 +20,12 @@ $(document).ready(function() {
                 users.forEach(user => {
                     userTableBody.append(`
                         <tr>
-                            <td>${user.id}</td>
-                            <td>${user.first_name} ${user.last_name}</td>
-                            <td>${user.email}</td>
+                            <td>${userId}</td>
+                            <td>${title} ${user.last_name}</td>
+                            <td>${body}</td>
                             <td>
-                                <button class="btn btn-warning btn-sm edit-user-btn" data-id="${user.id}">Editar</button>
-                                <button class="btn btn-danger btn-sm delete-user-btn" data-id="${user.id}">Eliminar</button>
+                                <button class="btn btn-warning btn-sm edit-user-btn" data-id="${userId}">Editar</button>
+                                <button class="btn btn-danger btn-sm delete-user-btn" data-id="${userId}">Eliminar</button>
                             </td>
                         </tr>
                     `);
@@ -55,8 +55,8 @@ $(document).ready(function() {
         event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional.
 
         let userId = $('#user-id').val(); // ID del usuario (si se está editando).
-        let userName = $('#user-name').val().split(' '); // Nombre del usuario.
-        let userEmail = $('#user-email').val(); // Email del usuario.
+        let title = $('#user-name').val().split(' '); // Nombre del usuario.
+        let body = $('#user-email').val(); // Email del usuario.
 
         // Se determina si se trata de agregar (POST) o editar (PUT) un usuario.
         let method = userId ? 'PUT' : 'POST';
@@ -68,9 +68,9 @@ $(document).ready(function() {
             method: method, // Método HTTP (POST o PUT).
             contentType: 'application/json', // Tipo de contenido de los datos enviados.
             data: JSON.stringify({
-                first_name: userName[0], // Primer nombre.
-                last_name: userName[1] || '', // Segundo nombre (si lo hay).
-                email: userEmail // Email.
+                userId: userName[0], // Primer nombre.
+                title: userName[1] || '', // Segundo nombre (si lo hay).
+                body: body // Email.
             }),
             success: function() {
                 // Si la operación es exitosa, se recargan los usuarios y se muestra una alerta de éxito.
@@ -97,9 +97,9 @@ $(document).ready(function() {
                 let user = response.data; // Datos del usuario.
 
                 // Se rellenan los campos del formulario con los datos del usuario.
-                $('#user-id').val(user.id);
-                $('#user-name').val(`${user.first_name} ${user.last_name}`);
-                $('#user-email').val(user.email);
+                $('#user-id').val(userId);
+                $('#user-name').val(`${title} ${user.last_name}`);
+                $('#user-email').val(body);
                 $('#userModalLabel').text('Editar Usuario'); // Se cambia el título del modal.
                 $('#userModal').modal('show'); // Se muestra el modal.
             }
